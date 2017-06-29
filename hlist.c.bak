@@ -59,4 +59,4 @@ static inline void __list_add_rcu(struct list_head *new,
 		(p) = (typeof(*v) __force space *)(v); \
 	})
 
-the difference here is the smp_wmb() and the position of it. This allows the new object to be initialized before it is seem by others
+the difference here is the smp_wmb() and the position of it. This allows the new object to be "online" before others can access it
